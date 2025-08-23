@@ -1,36 +1,34 @@
-/* ফাংশন নেম দিতে হবে radianToDegree । এই ফাংশনে প্যারামিটার হিসেবে নিবে রেডিয়ান (radian)। তারপর সেটাকে ডিগ্রীতে (degree) কনভার্ট করে কত ডিগ্রী (degree) হয় সেই সংখ্যা রিটার্ন করবে। রিটার্ন করার সময় তোমাকে দশমিক এর পর দুই ঘর রিটার্ন করতে হবে। */
+// Write a function named mindGame that takes a number as input. Multiply the number by 3, add 10, divide the result by 2, and then subtract 5. Return the final result. Also validate the input to ensure it is a number.
 
-// 1rad × 180/π = 57.296°
 
-/* -----------------radian to degree-------------------- */
+// A function that takes a number, performs some math operations, and returns the result.
 
-// function radianToDegree(radian){
-//     // validation
-//     if(typeof radian !== 'number'){
-//         return 'Provide a valid number'
-//     }
-//     const PI = 3.14159265359;
+function mindGame(number) {
 
-//     // const degree = (radian * (180/PI)).toFixed(2);
-//     // console.log(degree);
+    // validation first
+    if (typeof number !== 'number') {
+        return 'Please enter a number';
+    }
 
-//     const degree = parseFloat((radian * (180/PI)).toFixed(2));
-//     console.log(degree);
-//     return degree;
-// }
-// let result = radianToDegree(10);
-// console.log(result);
+    // Multiply by 3
+    const multiplyNumber = number * 3;
+    console.log('multiplyNumber:', multiplyNumber);
 
-/* ---------------other way----------------- */
+    // Add 10
+    const sum = multiplyNumber + 10;
+    console.log('sum:', sum);
 
-// function radianToDegree(radian){
-//     // validation
-//     if(typeof radian !== 'number'){
-//         return 'Provide a valid number'
-//     }
-//     let degree = radian * 57.2957795;
-//     degree = parseFloat(degree.toFixed(2));
-//     // console.log(degree);
-//     return degree;
-// }
-console.log(radianToDegree(10));
+    // Divide by 2
+    const division = sum / 2;
+    console.log('division:', division);
+
+    // Subtract 5
+    const subtract = division - 5;
+    console.log('subtract:', subtract);
+
+    return subtract;
+}
+
+console.log("Final Result:", mindGame(50));
+console.log('-----------------------');
+console.log("Final Result:", mindGame('50'));
